@@ -1,0 +1,97 @@
+.art-wrapper {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: space-between;
+  gap: 26px;
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0;
+}
+
+.active-art .content-wrapper {
+  padding: 0;
+}
+
+.art-title {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.art-description {
+  font-size: 11px;
+  color: hsl(var(--card-foreground) / 0.5);
+}
+
+.active-art {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  z-index: 10;
+}
+
+.active-art .inner {
+  display: flex;
+  height: fit-content;
+  width: 500px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  overflow: hidden;
+  padding: 16px;
+  padding: 1rem;
+  background: hsl(var(--background));
+  border: 1px solid hsl(var(--border));
+}
+
+.header {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 16px;
+}
+
+.header-inner {
+  position: relative;
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.long-description {
+  font-size: 12px;
+  color: hsl(var(--card-foreground) / 0.6);
+}
+
+.score {
+  font-size: 12px;
+  color: hsl(var(--card-foreground) / 0.5);
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.more-detail {
+  position: relative;
+  width: 100%;
+  font-size: 12px;
+  text-align: left;
+  padding: 4px 0px;
+  border-radius: 4px;
+}
+
+.overlay {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px);
+}
