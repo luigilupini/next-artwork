@@ -7,4 +7,12 @@ export default defineConfig({
       // implement node event listeners here
     },
   },
+
+  component: {
+    devServer: {
+      framework: "next",
+      bundler: "webpack",
+    },
+    specPattern: "./cypress/component/**/*.spec.{js,jsx,ts,tsx}",
+  },
 })
