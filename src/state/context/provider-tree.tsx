@@ -1,13 +1,9 @@
 "use client"
 
+import ThemeProvider from "@/state/context/leaf/theme"
 import { PropsWithChildren } from "react"
 
-import { useMounted } from "@/lib/hooks/use-mounted"
-import ThemeProvider from "@/state/context/leaf/theme"
-
-const ProviderTree = ({ children }: PropsWithChildren) => {
-  const mounted = useMounted()
-  if (!mounted) return null
+export default function ProviderTree({ children }: PropsWithChildren) {
   return (
     <ThemeProvider
       attribute="class"
@@ -19,5 +15,3 @@ const ProviderTree = ({ children }: PropsWithChildren) => {
     </ThemeProvider>
   )
 }
-
-export default ProviderTree

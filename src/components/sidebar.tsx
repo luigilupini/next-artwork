@@ -35,14 +35,22 @@ export default function Sidebar() {
               className="fixed z-50 h-screen w-80 overflow-hidden border-r bg-card text-card-foreground shadow-lg"
             >
               <Link href={queryString} className="absolute right-0 top-0">
-                <Button variant="ghost" size="sm" className="m-1 p-1">
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  className="m-1 p-1"
+                  data-id="close-sidebar-button"
+                >
                   <X className="size-5" />
                 </Button>
               </Link>
               <header className="p-4">
                 <h1 className="text-xl font-bold">Bookmarks</h1>
               </header>
-              <main className="mx-2 h-[90%] overflow-y-auto p-1">
+              <main
+                className="mx-2 h-[90%] overflow-y-auto p-1"
+                data-id="open-sidebar-content"
+              >
                 <BookmarkList />
               </main>
             </motion.div>

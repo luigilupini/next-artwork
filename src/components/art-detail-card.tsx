@@ -1,6 +1,7 @@
 "use client"
 
 import { AnimatePresence, motion } from "framer-motion"
+import { PropsWithChildren } from "react"
 
 export default function ArtDetailCard({ artDetail }: any) {
   if (!artDetail) return null
@@ -34,27 +35,15 @@ export default function ArtDetailCard({ artDetail }: any) {
             className="w-full overflow-hidden"
           >
             <div className="art-description flex flex-col gap-1 py-2">
-              <p>
-                <span className="mr-1 font-semibold">Credit Line:</span>
-                {credit_line || "Unknown"}
-              </p>
-              <p>
-                <span className="mr-1 font-semibold">Description:</span>
-                {short_description || "Unknown"}
-              </p>
-              <p>
-                <span className="mr-1 font-semibold">Exhibition History:</span>
-                {exhibition_history || "Unknown"}
-              </p>
-
-              <p>
-                <span className="mr-1 font-semibold">Origin:</span>
-                {place_of_origin || "Unknown"}
-              </p>
-              <p>
-                <span className="mr-1 font-semibold">Source:</span>
+              <Slot title="Credit Line:">{credit_line || "N/A"}</Slot>
+              <Slot title="Description:">{short_description || "N/A"}</Slot>
+              <Slot title="Exhibition History:">
+                {exhibition_history || "N/A"}
+              </Slot>
+              <Slot title="Origin:">{place_of_origin || "N/A"}</Slot>
+              <Slot title="Source:">
                 <span className="text-primary">Art Institute of Chicago</span>
-              </p>
+              </Slot>
             </div>
           </motion.div>
         )}
@@ -62,3 +51,14 @@ export default function ArtDetailCard({ artDetail }: any) {
     </>
   )
 }
+
+const Slot = ({
+  children,
+  title,
+  className,
+}: PropsWithChildren<{ title?: string; className?: string }>) => (
+  <p className={className}>
+    <span className="mr-1 font-semibold">{title}</span>
+    {children}
+  </p>
+)

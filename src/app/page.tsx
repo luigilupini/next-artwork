@@ -33,6 +33,7 @@ export default async function HomePage({ searchParams }: Props) {
           <ThemeToggle />
         </div>
       </GridHeader>
+
       <GridBody className="rounded-none">
         {data.length ? <SharedList data={data} /> : <EmptyResult />}
       </GridBody>

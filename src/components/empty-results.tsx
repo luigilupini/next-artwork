@@ -1,9 +1,17 @@
+"use client"
+
 import { cn } from "@/lib/utils"
+import { motion } from "framer-motion"
 import { Bird } from "lucide-react"
 
 export default function EmptyResult({ className }: { className?: string }) {
   return (
-    <div className={cn("center size-full flex-col gap-1", className)}>
+    <motion.div
+      initial={{ opacity: 0, scale: 0.5 }}
+      animate={{ opacity: 1, scale: 1 }}
+      exit={{ opacity: 0, scale: 0.5 }}
+      className={cn("center size-full flex-col gap-1", className)}
+    >
       <Bird size={64} />
       <p className="center flex-col">
         <span className="font-medium opacity-80">No results found</span>
@@ -11,6 +19,6 @@ export default function EmptyResult({ className }: { className?: string }) {
           Try search for something interesting! <br /> Bookmark a few items :)
         </span>
       </p>
-    </div>
+    </motion.div>
   )
 }

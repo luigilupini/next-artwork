@@ -1,16 +1,16 @@
 "use client"
 
-import { DetailProps, type ArtProps } from "@/lib/definitions"
-import { motion } from "framer-motion"
-import { PropsWithChildren, forwardRef, useState } from "react"
-import BookmarkButton from "./bookmark-button"
-import StarCounter from "./star-counter"
+import ArtDetailCard from "@/components/art-detail-card"
+import BookmarkButton from "@/components/bookmark-button"
+import StarCounter from "@/components/common/star-counter"
+import FluidSpinner from "@/components/loader/fluid"
+import "@/components/shared-list-layout.css"
 
+import { DetailProps, type ArtProps } from "@/lib/definitions"
 import { cn, delay } from "@/lib/utils"
 import { getArt } from "@/server/api"
-import ArtDetailCard from "./art-detail-card"
-import FluidSpinner from "./loader/fluid"
-import "./shared-list-layout.css"
+import { motion } from "framer-motion"
+import { PropsWithChildren, forwardRef, useState } from "react"
 
 type OverlayProps = {
   art: ArtProps

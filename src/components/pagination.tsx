@@ -1,5 +1,6 @@
 "use client"
 
+import MorphText from "@/components/common/morph-text"
 import {
   PaginationContent,
   Pagination as PaginationControl,
@@ -8,7 +9,6 @@ import {
   PaginationPrevious,
 } from "@/components/common/pagination"
 import { usePathname, useSearchParams } from "next/navigation"
-import MorphText from "./moph-text"
 
 type Props = {
   pagination: {
@@ -33,6 +33,7 @@ export default function Pagination({ pagination }: Props) {
 
   const { total, total_pages, current_page } = pagination
   const current = String(current_page)
+
   return (
     <>
       {pagination.total_pages > 1 && (
