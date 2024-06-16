@@ -57,7 +57,8 @@ Bookmarked artworks are displayed separately and can be found in a sidebar that 
   - Components: `<BookmarkCart />`, `<Sidebar />` under `components`
 
 ## Technical requirements
-- App is based on Next.js
+- App is based on Next.js ✅
+- All components have a clear type interface ✅
 - State and view of the app are separated ✅
   - Manage local storage using hooks under `use-hooks-ts` 😬
     - I am hoping that is not a problem 🙏
@@ -69,6 +70,7 @@ Bookmarked artworks are displayed separately and can be found in a sidebar that 
   -  See definitions in `lib/definitions.ts` ✅
 - App has relevant tests
   - Basic navigation tests ✅
+  - Basic component tests ✅
   - Outstanding testing for mocking API response 😬
 - Minimum required documentation is provided ✅
 - Source code is presented on GitHub ✅
@@ -105,7 +107,11 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-For cypress testing e2e navigation test, first ensure the local server is running. Then run: `npm run cypress open` in the root folder of your project.
+For cypress testing e2e navigation and common components that all reside under `cypress` folder within the project root. Please ensure the local server is running first for the little e2e demo.
+
+![alt text](./capture-cypress.png)
+
+Then run: `npm run cypress open` in the root folder of your project.
 
 ### Local Build Results
 
