@@ -98,3 +98,14 @@ Route (app)                              Size     First Load JS
 ○ (Static)   prerendered as static content
 λ  (Dynamic)  server-rendered on demand using Node.js
 ```
+
+## Short Walk Through
+
+- Step 1
+![alt text](./capture-walk-project-1.png)
+
+- Step 2
+![alt text](./capture-walk-project-2.png)
+
+- Step 3
+![alt text](./capture-walk-project-3.png)
