@@ -4,7 +4,7 @@
 - Written in React with [TypeScript](https://www.typescriptlang.org/)
 - Responsive, Mobile Friendly, Completely Fluid UI
 - Endpoint: Art Institute of Chicago API `/api/artworks`
-- Deployment: [Vercel](https://https://next-artwork.vercel.app/)
+- Deployment: [Vercel](https://next-artwork.vercel.app/)
 
 ![alt text](./capture.png)
 
